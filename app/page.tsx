@@ -53,7 +53,7 @@ const Home = () => {
 
         <div className="rounded-ful relative h-48 w-48 -rotate-90 drop-shadow-lg md:h-64 md:w-64">
           <Image
-            src="/self-image.png"
+            src="/self-image.PNG"
             alt="profile"
             fill
             className="rounded-xl rounded-bl-4xl object-cover"
@@ -109,7 +109,7 @@ const Home = () => {
           </TabsContent>
           <TabsContent value="skills" className="w-full">
             <Card className="items-center justify-center gap-4">
-              {skills.map((item) => (
+              {/* {skills.map((item) => (
                 <ul key={item.name} className="flex items-center gap-2">
                   <li className="relative h-10 w-10">
                     <Image
@@ -121,7 +121,7 @@ const Home = () => {
                   </li>
                   <li>{item.name}</li>
                 </ul>
-              ))}
+              ))} */}
             </Card>
           </TabsContent>
         </Tabs>

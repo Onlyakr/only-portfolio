@@ -53,31 +53,24 @@ export const educations = [
 export const skills = [
   {
     name: "HTML",
-    image: "/images/html.png",
   },
   {
     name: "CSS",
-    image: "/images/css.png",
   },
   {
     name: "JavaScript",
-    image: "/images/javascript.png",
   },
   {
     name: "TypeScript",
-    image: "/images/typescript.png",
   },
   {
     name: "React",
-    image: "/images/react.png",
   },
   {
     name: "Next.js",
-    image: "/images/nextjs.png",
   },
   {
     name: "Tailwind CSS",
-    image: "/images/tailwindcss.png",
   },
 ];
 
