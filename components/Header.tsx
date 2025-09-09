@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
 import NavLink from "./NavLink";
 

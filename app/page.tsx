@@ -18,7 +18,9 @@ const Home = () => {
     <div className="flex flex-col gap-16">
       <section className="flex flex-col-reverse items-center justify-between gap-8 md:flex-row">
         <div className="flex max-w-[400px] flex-1 flex-col gap-4 md:max-w-[420px]">
-          <h1 className="text-4xl leading-tight font-bold">I'm {intro.name}</h1>
+          <h1 className="text-4xl leading-tight font-bold">
+            I&apos;m {intro.name}
+          </h1>
           <p className="text-secondary-foreground/90 text-base">
             {intro.firstDescription}
           </p>
