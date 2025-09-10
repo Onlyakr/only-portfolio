@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <div className="flex flex-col gap-16">
       <section className="flex flex-col-reverse items-center justify-between gap-8 md:flex-row">
-        <div className="flex max-w-[400px] flex-1 flex-col gap-4 md:max-w-[420px]">
+        <div className="flex max-w-[500px] flex-1 flex-col gap-4">
           <h1 className="text-4xl leading-tight font-bold">
             I&apos;m {intro.name}
           </h1>
@@ -30,7 +30,7 @@ const Home = () => {
             to learn, grow, and contribute.
           </p>
           <p className="text-primary relative flex items-center text-base font-semibold">
-            <ArrowDownRight className="mx-2 animate-bounce" />
+            <ArrowDownRight className="animate-bounce" />
             {intro.thirdDescription}
           </p>
 
