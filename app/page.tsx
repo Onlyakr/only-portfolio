@@ -43,7 +43,7 @@ const Home = () => {
             </Button>
             {socialLinks.map((link) => (
               <li key={link.name}>
-                <Link href={link.href}>
+                <Link href={link.href} target="_blank">
                   {link.icon === "Github" ? (
                     <Github />
                   ) : link.icon === "Linkedin" ? (
@@ -99,11 +99,17 @@ const Home = () => {
                   </div>
                   <Card className="flex-1 gap-2 border-none shadow-none">
                     <CardHeader>
-                      <CardDescription>{education.year}</CardDescription>
-                      <CardTitle className="leading-tight">
-                        {education.institution}
+                      <CardDescription>
+                        <p>{education.year}</p>
+                      </CardDescription>
+                      <CardTitle className="leading-tight font-medium">
+                        <p>{education.institution}</p>
                       </CardTitle>
-                      <CardDescription>{education.name}</CardDescription>
+                      <CardDescription>
+                        <p>
+                          {education.name} ({education.descriptions[0]})
+                        </p>
+                      </CardDescription>
                     </CardHeader>
                     {/* <CardContent>
                       <ul className="text-muted-foreground list-disc pl-4 text-sm">

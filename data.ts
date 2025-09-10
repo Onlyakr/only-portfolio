@@ -14,7 +14,7 @@ export const socialLinks = [
   },
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/akrawin-datchanee-963b43353/",
+    href: "https://www.linkedin.com/in/akrawin-datchanee-8b6022384/",
     icon: "Linkedin",
   },
   // {
@@ -29,15 +29,15 @@ export const educations = [
     image: "/kmitl-image.png",
     name: "B.Eng in Computer Engineering",
     institution: "King Mongkut's Institute of Technology Ladkrabang",
-    year: "Jul 2023 - Present",
-    descriptions: ["GPA 4.00"],
+    year: "2023 - Present",
+    descriptions: ["GPA 3.72"],
   },
   {
     image: "/kmutnb-image.png",
     name: "Pre-Engineering in Electrical Engineering",
     institution: "King Mongkut's University of Technology North Bangkok",
     year: "2020 - 2023",
-    descriptions: ["GPA 3.95"],
+    descriptions: ["GPA 3.1"],
   },
 ];
 
@@ -100,7 +100,11 @@ export const projects = [
   {
     name: "POS System (In Progress)",
     description:
+      // I do frontend only
       "A POS system that allows you to manage inventory, sales, and customers.",
+
+    //  // This is a university project I developed with a friend; my responsibility is the frontend, which I used as a learning experience.
+    //  "A Point of Sale (POS) system created as a university project in collaboration with a friend. The application enables users to manage inventory, process sales, and handle customer information. I was responsible for building the frontend using React, Next.js, and Tailwind CSS, using this project as an opportunity to learn and improve my frontend development skills.",
     image: "/pos-image.png",
     technologies: ["React", "Next.js", "Tailwind CSS"],
     link: {

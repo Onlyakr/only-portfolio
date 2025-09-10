@@ -39,7 +39,7 @@ const formSchema = z.object({
     .string()
     .min(2, { message: "Name must be at least 2 characters" })
     .max(50, { message: "Name must be at most 50 characters" }),
-  email: z.email(),
+  email: z.email({ message: "Invalid email address" }),
   message: z
     .string()
     .min(2, { message: "Message must be at least 2 characters" })
