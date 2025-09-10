@@ -2,7 +2,8 @@ export const intro = {
   name: "Akrawin Datchanee",
   firstDescription: "20yo, 3rd-year Computer Engineering student at KMITL.",
   secondDescription:
-    "Looking for a frontend internship to learn, grow, and contribute.",
+    "Looking for a Frontend internship to learn, grow, and contribute.",
+  thirdDescription: "Internship period: Aug 2025 - Dec 2025",
 };
 
 export const socialLinks = [
@@ -16,11 +17,11 @@ export const socialLinks = [
     href: "https://www.linkedin.com/in/akrawin-datchanee-963b43353/",
     icon: "Linkedin",
   },
-  {
-    name: "Mail",
-    href: "mailto:66200423@kmitl.ac.th",
-    icon: "Mail",
-  },
+  // {
+  //   name: "Mail",
+  //   href: "mailto:66200423@kmitl.ac.th",
+  //   icon: "Mail",
+  // },
 ];
 
 export const educations = [
@@ -28,25 +29,15 @@ export const educations = [
     image: "/kmitl-image.png",
     name: "B.Eng in Computer Engineering",
     institution: "King Mongkut's Institute of Technology Ladkrabang",
-    year: "2022-2026 (In Progress)",
-    descriptions: [
-      "GPA 4.00",
-      "3rd year",
-      "Top 10% of the class",
-      "Dean's List",
-    ],
+    year: "Jul 2023 - Present",
+    descriptions: ["GPA 4.00"],
   },
   {
     image: "/kmutnb-image.png",
     name: "Pre-Engineering in Electrical Engineering",
     institution: "King Mongkut's University of Technology North Bangkok",
-    year: "2018-2022",
-    descriptions: [
-      "GPA 3.95",
-      "Top 10% of the class",
-      "Dean's List",
-      "Honor Roll",
-    ],
+    year: "2020 - 2023",
+    descriptions: ["GPA 3.95"],
   },
 ];
 
@@ -76,43 +67,45 @@ export const skills = [
 
 export const projects = [
   {
-    name: "Project 1",
-    description: "Description 1",
-    image: "/images/project1.png",
-    technologies: ["React", "Next.js", "Tailwind CSS"],
+    name: "Weather App",
+    description:
+      "A weather app that allows you to search for weather information for a specific location.",
+    image: "/weather-app-image.png",
+    technologies: ["React", "Tailwind CSS"],
     link: {
-      github: "https://github.com/Onlyakr/project1",
-      live: "https://project1.com",
+      github: "https://github.com/Onlyakr/weather-app",
+      live: "https://weather-app-two-nu-55.vercel.app/",
     },
   },
   {
-    name: "Project 2",
-    description: "Description 2",
-    image: "/images/project2.png",
-    technologies: ["React", "Next.js", "Tailwind CSS"],
+    name: "Todo List",
+    description: "A todo list that allows you to add, edit, and delete tasks.",
+    image: "/todo-list-image.png",
+    technologies: ["React", "Tailwind CSS"],
     link: {
-      github: "https://github.com/Onlyakr/project2",
-      live: "https://project2.com",
+      github: "https://github.com/Onlyakr/todo-list",
+      live: "https://tamraidee.vercel.app/",
     },
   },
   {
-    name: "Project 3 (In Progress)",
-    description: "Description 3",
-    image: "/images/project3.png",
+    name: "Portfolio",
+    description: "My personal portfolio website.",
+    image: "/portfolio-image.png",
     technologies: ["React", "Next.js", "Tailwind CSS"],
     link: {
-      github: "https://github.com/Onlyakr/project3",
-      live: "https://project3.com",
+      github: "https://github.com/Onlyakr/only-portfolio",
+      // live: "https://akrawin-portfolio.vercel.app/",
     },
   },
   {
-    name: "Project 4 (In Progress)",
-    description: "Description 4",
-    image: "/images/project4.png",
+    name: "POS System (In Progress)",
+    description:
+      "A POS system that allows you to manage inventory, sales, and customers.",
+    image: "/pos-image.png",
     technologies: ["React", "Next.js", "Tailwind CSS"],
     link: {
-      github: "https://github.com/Onlyakr/project4",
-      live: "https://project4.com",
+      github: "https://github.com/Onlyakr/pos-app-frontend",
+      // live: "https://project3.com",
     },
   },
 ];

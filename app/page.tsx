@@ -7,8 +7,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { educations, skills, intro, socialLinks } from "@/data";
-import { FileDown, Github, Linkedin, Mail } from "lucide-react";
+import { educations, intro, socialLinks } from "@/data";
+import { FileDown, Github, Linkedin, Mail, ArrowDownRight } from "lucide-react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -24,13 +24,19 @@ const Home = () => {
           <p className="text-secondary-foreground/90 text-base">
             {intro.firstDescription}
           </p>
-          <p className="text-secondary-foreground/90 text-lg">
-            {intro.secondDescription}
+          <p className="text-secondary-foreground/90 text-base">
+            Looking for a{" "}
+            <span className="text-primary font-bold">Frontend</span> internship
+            to learn, grow, and contribute.
+          </p>
+          <p className="text-primary relative flex items-center text-base font-semibold">
+            <ArrowDownRight className="mx-2 animate-bounce" />
+            {intro.thirdDescription}
           </p>
 
           <ul className="text-muted-foreground mt-4 flex items-center gap-6">
             <Button variant="outline" asChild className="h-10 w-[150px]">
-              <Link href="/resume.pdf">
+              <Link target="_blank" href="/resume.pdf">
                 <FileDown />
                 <span className="font-semibold">Resume</span>
               </Link>
@@ -58,7 +64,7 @@ const Home = () => {
             src="/self-image.PNG"
             alt="profile"
             fill
-            className="rounded-xl rounded-bl-4xl object-cover"
+            className="z-50 rounded-xl rounded-bl-4xl object-cover"
           />
         </div>
       </section>
@@ -69,10 +75,12 @@ const Home = () => {
           className="flex w-full items-center justify-center"
         >
           <TabsList className="h-11 w-full p-1">
-            <TabsTrigger value="education" className="border-none">
+            <TabsTrigger value="education" className="cursor-pointer">
               Education
             </TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsTrigger value="work" className="cursor-pointer">
+              Work
+            </TabsTrigger>
           </TabsList>
           <TabsContent value="education" className="w-full">
             <Card className="gap-4">
@@ -86,7 +94,7 @@ const Home = () => {
                       src={education.image}
                       alt={education.name}
                       fill
-                      className="object-cover"
+                      className="border-border rounded-full border object-cover"
                     />
                   </div>
                   <Card className="flex-1 gap-2 border-none shadow-none">
@@ -97,34 +105,20 @@ const Home = () => {
                       </CardTitle>
                       <CardDescription>{education.name}</CardDescription>
                     </CardHeader>
-                    <CardContent>
+                    {/* <CardContent>
                       <ul className="text-muted-foreground list-disc pl-4 text-sm">
                         {education.descriptions.map((description) => (
                           <li key={description}>{description}</li>
                         ))}
                       </ul>
-                    </CardContent>
+                    </CardContent> */}
                   </Card>
                 </Card>
               ))}
             </Card>
           </TabsContent>
-          <TabsContent value="skills" className="w-full">
-            <Card className="items-center justify-center gap-4">
-              {/* {skills.map((item) => (
-                <ul key={item.name} className="flex items-center gap-2">
-                  <li className="relative h-10 w-10">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </li>
-                  <li>{item.name}</li>
-                </ul>
-              ))} */}
-            </Card>
+          <TabsContent value="work" className="w-full">
+            <Card className="items-center justify-center gap-4"></Card>
           </TabsContent>
         </Tabs>
       </section>
