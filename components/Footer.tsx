@@ -16,7 +16,7 @@ const Footer = () => {
         <ul className="text-muted-foreground flex items-center gap-4">
           {socialLinks.map((link) => (
             <li key={link.name}>
-              <Link href={link.href}>
+              <Link href={link.href} target="_blank">
                 {link.icon === "Github" ? (
                   <Github />
                 ) : link.icon === "Linkedin" ? (
