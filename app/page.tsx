@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -102,8 +101,10 @@ const Home = () => {
                       <CardDescription>
                         <p>{education.year}</p>
                       </CardDescription>
-                      <CardTitle className="leading-tight font-medium">
-                        <p>{education.institution}</p>
+                      <CardTitle className="leading-normal font-medium">
+                        {education.institution.map((institution) => (
+                          <p key={institution}>{institution}</p>
+                        ))}
                       </CardTitle>
                       <CardDescription>
                         <p>
