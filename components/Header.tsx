@@ -2,6 +2,7 @@ import { ModeToggle } from "./ModeToggle";
 
 import NavLink from "./NavLink";
 import * as motion from "motion/react-client";
+import { BlurFade } from "./ui/blur-fade";
 
 const navLinks = [
   {
@@ -20,12 +21,7 @@ const navLinks = [
 
 const Header = () => {
   return (
-    <motion.header
-      className="bg-background/70 text-muted-foreground sticky top-0 z-50 h-24 backdrop-blur-sm"
-      initial={{ opacity: 0, y: -100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <header className="bg-background/70 text-muted-foreground sticky top-0 z-50 h-24 backdrop-blur-sm">
       <nav className="container mx-auto flex h-full max-w-3xl items-center justify-between">
         <ul className="flex items-center gap-4">
           {navLinks.map((link) => (
@@ -37,7 +33,25 @@ const Header = () => {
 
         <ModeToggle />
       </nav>
-    </motion.header>
+    </header>
+    // <motion.header
+    //   className="bg-background/70 text-muted-foreground sticky top-0 z-50 h-24 backdrop-blur-sm"
+    //   initial={{ opacity: 0, y: -100 }}
+    //   animate={{ opacity: 1, y: 0 }}
+    //   transition={{ duration: 0.5 }}
+    // >
+    //   <nav className="container mx-auto flex h-full max-w-3xl items-center justify-between">
+    //     <ul className="flex items-center gap-4">
+    //       {navLinks.map((link) => (
+    //         <li key={link.name}>
+    //           <NavLink href={link.href}>{link.name}</NavLink>
+    //         </li>
+    //       ))}
+    //     </ul>
+
+    //     <ModeToggle />
+    //   </nav>
+    // </motion.header>
   );
 };
 export default Header;
