@@ -1,3 +1,5 @@
+import * as motion from "motion/react-client";
+
 import Link from "next/link";
 
 import { Linkedin, Github, Mail } from "lucide-react";
@@ -7,7 +9,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-16 h-32">
+    <motion.footer
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="mt-16 h-32"
+    >
       <div className="container mx-auto flex h-full max-w-3xl items-center justify-between">
         <p className="text-muted-foreground text-sm">
           © {currentYear} Akrawin Portfolio
@@ -31,7 +38,7 @@ const Footer = () => {
           ))}
         </ul>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 export default Footer;

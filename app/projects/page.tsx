@@ -1,3 +1,5 @@
+import * as motion from "motion/react-client";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -14,7 +16,12 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <div className="flex flex-col gap-8">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col gap-8"
+    >
       <h1 className="text-4xl font-bold">My projects</h1>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -54,24 +61,12 @@ const Projects = () => {
                   ))}
                 </ul>
               </CardDescription>
-              {/* <CardDescription>
-                <ul className="flex gap-2 text-sm">
-                  {project.technologies.map((technology) => (
-                    <li
-                      className="bg-accent dark:bg-muted rounded-md px-2 py-1"
-                      key={technology}
-                    >
-                      {technology}
-                    </li>
-                  ))}
-                </ul>
-              </CardDescription> */}
             </CardHeader>
             <CardFooter className="flex flex-col items-start gap-6">
               <ul className="flex gap-2 text-sm">
                 {project.technologies.map((technology) => (
                   <li
-                    className="text-secondary-foreground/80 dark:bg-muted rounded-md px-1.5 py-1"
+                    className="text-secondary-foreground/80 bg-accent dark:bg-muted rounded-md px-1 py-0.5 md:px-1.5 md:py-1"
                     key={technology}
                   >
                     {technology}
@@ -99,7 +94,7 @@ const Projects = () => {
           </Card>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default Projects;

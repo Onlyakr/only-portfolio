@@ -45,24 +45,35 @@ export const educations = [
 export const skills = [
   {
     name: "HTML",
+    src: "/html-icon.png",
   },
   {
     name: "CSS",
+    src: "/css-icon.png",
   },
   {
     name: "JavaScript",
+    src: "/javascript-icon.png",
   },
   {
     name: "TypeScript",
+    src: "/typescript-icon.png",
   },
   {
-    name: "React",
+    name: "React.js",
+    src: "/react-icon.png",
   },
   {
     name: "Next.js",
+    src: "/next-icon.svg",
   },
   {
-    name: "Tailwind CSS",
+    name: "Tailwind",
+    src: "/tailwind-icon.png",
+  },
+  {
+    name: "Shadcn UI",
+    src: "/shadcn-icon.png",
   },
 ];
 
@@ -73,7 +84,7 @@ export const projects = [
       "A simple task manager where you can add, edit and delete tasks..",
     ],
     image: "/todo-list-image.png",
-    technologies: ["React", "Tailwind CSS", "Vite"],
+    technologies: ["React", "Tailwind", "Vite"],
     link: {
       github: "https://github.com/Onlyakr/todo-list",
       live: "https://tamraidee.vercel.app/",
@@ -85,7 +96,7 @@ export const projects = [
       "A responsive app that shows live weather forecasts by fetching data from an external API.",
     ],
     image: "/weather-app-image.png",
-    technologies: ["React", "Tailwind CSS", "Vite"],
+    technologies: ["React", "Tailwind", "Vite"],
     link: {
       github: "https://github.com/Onlyakr/weather-app",
       live: "https://weather-app-two-nu-55.vercel.app/",
@@ -97,7 +108,7 @@ export const projects = [
       "A point-of-sale system to manage inventory, sales, and customers.",
     ],
     image: "/pos-image.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn"],
+    technologies: ["Next.js", "TypeScript", "Tailwind", "Shadcn"],
     link: {
       github: "https://github.com/Onlyakr/pos-app-frontend",
     },
@@ -108,7 +119,7 @@ export const projects = [
       "A restaurant finder with an interactive search to discover nearby places.",
     ],
     image: "/tastetrail-image.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn"],
+    technologies: ["Next.js", "TypeScript", "Tailwind", "Shadcn"],
     link: {
       github: "https://github.com/KMITL-PCC/TasteTrail",
     },

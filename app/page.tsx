@@ -1,3 +1,5 @@
+import * as motion from "motion/react-client";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -6,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { educations, intro, socialLinks } from "@/data";
+import { educations, intro, skills, socialLinks } from "@/data";
 import { FileDown, Github, Linkedin, Mail, ArrowDownRight } from "lucide-react";
 
 import Image from "next/image";
@@ -14,7 +16,12 @@ import Link from "next/link";
 
 const Home = () => {
   return (
-    <div className="flex flex-col gap-16">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="flex flex-col gap-16"
+    >
       <section className="flex flex-col-reverse items-center justify-between gap-8 md:flex-row">
         <div className="flex max-w-[500px] flex-1 flex-col gap-4">
           <h1 className="text-4xl leading-tight font-bold">
@@ -34,7 +41,11 @@ const Home = () => {
           </p>
 
           <ul className="text-muted-foreground mt-4 flex items-center gap-6">
-            <Button variant="outline" asChild className="h-10 w-[150px]">
+            <Button
+              variant="outline"
+              asChild
+              className="h-10 w-[150px] transition-all duration-300 hover:scale-105"
+            >
               <Link target="_blank" href="/resume.pdf">
                 <FileDown />
                 <span className="font-semibold">Resume</span>
@@ -70,23 +81,48 @@ const Home = () => {
 
       <section className="flex items-center justify-center">
         <Tabs
-          defaultValue="education"
+          defaultValue="skills"
           className="flex w-full items-center justify-center"
         >
           <TabsList className="h-11 w-full p-1">
+            <TabsTrigger value="skills" className="cursor-pointer">
+              Skills
+            </TabsTrigger>
             <TabsTrigger value="education" className="cursor-pointer">
               Education
             </TabsTrigger>
-            <TabsTrigger value="work" className="cursor-pointer">
-              Work
-            </TabsTrigger>
           </TabsList>
+          <TabsContent value="skills" className="w-full">
+            <Card className="grid grid-cols-2 place-items-center gap-6 px-12 md:grid-cols-4 md:px-6">
+              {skills.map((skill) => (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  key={skill.name}
+                  className={`animate-fade-in flex h-full flex-col items-center justify-end gap-3 ${skill.name === "Tailwind CSS" ? "gap-4" : ""}`}
+                >
+                  <Image
+                    src={skill.src}
+                    alt={skill.name}
+                    width={50}
+                    height={50}
+                    className={`rounded-sm ${skill.name === "Next.js" || skill.name === "Shadcn UI" ? "dark:invert" : ""}`}
+                  />
+                  <p className="font-medium">{skill.name}</p>
+                </motion.div>
+              ))}
+            </Card>
+          </TabsContent>
           <TabsContent value="education" className="w-full">
-            <Card className="gap-4">
+            <Card className="gap-4 sm:gap-4">
               {educations.map((education) => (
-                <Card
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
                   key={education.name}
-                  className="ml-10 flex-row items-center gap-2 border-none px-4 py-2 shadow-none"
+                  className="text-card-foreground bg-card flex flex-col items-center gap-2 rounded-xl border border-none px-4 py-2 shadow-none sm:ml-10 sm:flex-row"
                 >
                   <div className="relative h-20 w-20">
                     <Image
@@ -96,7 +132,7 @@ const Home = () => {
                       className="border-border rounded-full border object-cover"
                     />
                   </div>
-                  <Card className="flex-1 gap-2 border-none shadow-none">
+                  <Card className="w-full flex-1 gap-2 border-none shadow-none">
                     <CardHeader>
                       <CardDescription>
                         <p>{education.year}</p>
@@ -112,24 +148,14 @@ const Home = () => {
                         </p>
                       </CardDescription>
                     </CardHeader>
-                    {/* <CardContent>
-                      <ul className="text-muted-foreground list-disc pl-4 text-sm">
-                        {education.descriptions.map((description) => (
-                          <li key={description}>{description}</li>
-                        ))}
-                      </ul>
-                    </CardContent> */}
                   </Card>
-                </Card>
+                </motion.div>
               ))}
             </Card>
           </TabsContent>
-          <TabsContent value="work" className="w-full">
-            <Card className="items-center justify-center gap-4"></Card>
-          </TabsContent>
         </Tabs>
       </section>
-    </div>
+    </motion.div>
   );
 };
 export default Home;
