@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
-import { BlurFade } from "@/components/ui/blur-fade";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
 import Header from "@/components/Header";
@@ -30,14 +29,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <ParticlesEffect>
-            <BlurFade>
-              <Header />
-              <main className="container mx-auto max-w-3xl flex-1">
-                {children}
-              </main>
-              <Footer />
-              <Toaster />
-            </BlurFade>
+            <Header />
+            <main className="container mx-auto max-w-3xl flex-1">
+              {children}
+            </main>
+            <Footer />
+            <Toaster />
             <SmoothCursor />
           </ParticlesEffect>
         </ThemeProvider>

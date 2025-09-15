@@ -1,5 +1,3 @@
-//eslint-disable
-
 import * as motion from "motion/react-client";
 
 import { Button } from "@/components/ui/button";
@@ -109,7 +107,7 @@ const Home = () => {
                   key={skill.name}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.65 }}
                   className={`animate-fade-in flex h-full flex-col items-center justify-end gap-3 ${skill.name === "Tailwind CSS" ? "gap-4" : ""}`}
                 >
                   <Image
@@ -126,8 +124,13 @@ const Home = () => {
           </TabsContent>
 
           <TabsContent value="education" className="w-full">
-            <Card className="items-start gap-4 px-4 md:px-16">
-              <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
+            <Card className="items-start gap-4 px-10 md:px-20">
+              <motion.ul
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.65 }}
+                className="mb-4 ml-4 divide-y divide-dashed border-l"
+              >
                 {educations.map((education) => (
                   <li className="relative ml-10 py-4" key={education.name}>
                     <div className="absolute top-2 -left-17 flex items-center justify-center rounded-full bg-white">
@@ -192,7 +195,7 @@ const Home = () => {
                   //   </Card>
                   // </motion.div>
                 ))}
-              </ul>
+              </motion.ul>
             </Card>
           </TabsContent>
         </Tabs>

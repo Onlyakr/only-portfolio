@@ -100,8 +100,8 @@ export function SmoothCursor({
   const cursorY = useSpring(0, springConfig);
   const rotation = useSpring(0, {
     ...springConfig,
-    damping: 60,
-    stiffness: 300,
+    damping: 50,
+    stiffness: 400,
   });
   const scale = useSpring(1, {
     ...springConfig,
