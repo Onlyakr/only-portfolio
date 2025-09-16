@@ -54,11 +54,11 @@ const Home = () => {
                 <span className="font-semibold">Resume</span>
               </Link>
             </Button> */}
-            <InteractiveHoverButton className="h-10 text-sm">
-              <Link target="_blank" href="/resume.pdf">
+            <Link target="_blank" href="/resume.pdf">
+              <InteractiveHoverButton className="h-10 text-sm">
                 <span className="font-semibold">Resume</span>
-              </Link>
-            </InteractiveHoverButton>
+              </InteractiveHoverButton>
+            </Link>
             {socialLinks.map((link) => (
               <li key={link.name}>
                 <Link href={link.href} target="_blank">
