@@ -1,6 +1,6 @@
-import { ModeToggle } from "./ModeToggle";
+import { ModeToggle } from "./mode-toggle";
 
-import NavLink from "./NavLink";
+import NavLink from "./nav-link";
 import * as motion from "motion/react-client";
 import { BlurFade } from "./ui/blur-fade";
 

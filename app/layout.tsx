@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
-import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import ParticlesEffect from "@/components/ParticlesEffect";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import ParticlesEffect from "@/components/particles-effect";
 
 import "./globals.css";
 
@@ -35,7 +34,6 @@ export default function RootLayout({
             </main>
             <Footer />
             <Toaster />
-            <SmoothCursor />
           </ParticlesEffect>
         </ThemeProvider>
       </body>

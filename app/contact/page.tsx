@@ -1,6 +1,6 @@
 import * as motion from "motion/react-client";
 
-import ContactForm from "@/components/ContactForm";
+import ContactForm from "@/components/contact-form";
 import { BlurFade } from "@/components/ui/blur-fade";
 
 const Contact = () => {
