@@ -1,5 +1,3 @@
-import * as motion from "motion/react-client";
-
 import Link from "next/link";
 
 import { Linkedin, Github, Mail } from "lucide-react";

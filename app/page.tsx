@@ -1,22 +1,15 @@
 import * as motion from "motion/react-client";
 
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { educations, intro, skills, socialLinks } from "@/data";
-import { FileDown, Github, Linkedin, Mail, ArrowDownRight } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDownRight } from "lucide-react";
 import { TypingAnimation } from "@/components/ui/typing-animation";
 
 import Image from "next/image";
 import Link from "next/link";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
 const Home = () => {
@@ -25,11 +18,12 @@ const Home = () => {
       <section className="flex flex-col-reverse items-center justify-between gap-8 md:flex-row">
         <div className="flex max-w-[500px] flex-1 flex-col gap-4">
           <TypingAnimation
-            children={`I'm ${intro.name} 👋` as string}
             startOnView={true}
             delay={500}
             className="text-4xl leading-tight font-bold lg:h-[45px]"
-          />
+          >
+            {`I'm ${intro.name} 👋` as string}
+          </TypingAnimation>
           <p className="text-secondary-foreground/90 text-base">
             {intro.firstDescription}
           </p>

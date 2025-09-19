@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 
+import ParticlesEffect from "@/components/particles-effect";
+
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import ParticlesEffect from "@/components/particles-effect";
 
 import "./globals.css";
 
