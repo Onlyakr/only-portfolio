@@ -2,7 +2,6 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-
 import { Particles } from "@/components/ui/particles";
 
 export default function ParticlesEffect({

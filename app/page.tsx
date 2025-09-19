@@ -5,12 +5,12 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { educations, intro, skills, socialLinks } from "@/data";
 import { Github, Linkedin, Mail, ArrowDownRight } from "lucide-react";
 import { TypingAnimation } from "@/components/ui/typing-animation";
-
-import Image from "next/image";
-import Link from "next/link";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
+
+import Image from "next/image";
+import Link from "next/link";
 
 const Home = () => {
   return (
