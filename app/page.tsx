@@ -2,7 +2,7 @@ import * as motion from "motion/react-client";
 
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { educations, intro, skills, socialLinks } from "@/data";
+import { educations, intro, skills, socialLinks } from "@/lib/data";
 import { Github, Linkedin, Mail, ArrowDownRight } from "lucide-react";
 import { TypingAnimation } from "@/components/ui/typing-animation";
 import { BlurFade } from "@/components/ui/blur-fade";

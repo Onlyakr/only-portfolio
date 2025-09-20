@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { Linkedin, Github, Mail } from "lucide-react";
-import { socialLinks } from "@/data";
+import { socialLinks } from "@/lib/data";
 import { BlurFade } from "./ui/blur-fade";
 
 const Footer = () => {

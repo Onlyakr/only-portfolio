@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { projects } from "@/data";
+import { projects } from "@/lib/data";
 import { Github, Globe } from "lucide-react";
 import { BlurFade } from "@/components/ui/blur-fade";
 
