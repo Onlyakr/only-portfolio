@@ -103,7 +103,7 @@ export const projects = [
     },
   },
   {
-    name: "POS System (Frontend, In Progress)",
+    name: "POS System (Frontend)",
     description: [
       "A point-of-sale system to manage inventory, sales, and customers.",
     ],
@@ -114,7 +114,7 @@ export const projects = [
     },
   },
   {
-    name: "TasteTrail (Frontend, In Progress)",
+    name: "TasteTrail (Frontend)",
     description: [
       "A restaurant finder with an interactive search to discover nearby places.",
     ],
