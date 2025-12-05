@@ -1,12 +1,12 @@
+import "./globals.css";
+
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import ParticlesEffect from "@/components/particles-effect";
-
-import "./globals.css";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import ParticlesEffect from "../components/particles-effect";
 
 export const metadata: Metadata = {
   title: "Akrawin Portfolio",
