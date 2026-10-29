@@ -131,7 +131,7 @@ const ContactForm = () => {
         {isLoading ? (
           <Button
             type="submit"
-            className="text-background/90 h-10 w-full cursor-not-allowed"
+            className="h-10 w-full cursor-not-allowed"
             disabled
           >
             <Loader2 className="animate-spin" />
@@ -140,7 +140,7 @@ const ContactForm = () => {
         ) : (
           <Button
             type="submit"
-            className="text-background/90 h-10 w-full cursor-pointer"
+            className="h-10 w-full cursor-pointer"
             disabled={isLoading}
           >
             <span>Send message</span>

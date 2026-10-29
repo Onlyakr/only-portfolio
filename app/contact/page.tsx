@@ -1,12 +1,17 @@
 import ContactForm from "@/components/contact-form";
-import { BlurFade } from "@/components/ui/blur-fade";
+import Section from "@/components/section";
 
 const Contact = () => {
   return (
-    <BlurFade className="flex flex-col gap-8">
-      <h1 className="text-4xl font-bold">Contact me</h1>
-      <ContactForm />
-    </BlurFade>
+    <>
+      <h1 className="px-6 py-12 text-4xl font-bold tracking-tight md:px-10 md:py-16">
+        Contact
+      </h1>
+
+      <Section>
+        <ContactForm />
+      </Section>
+    </>
   );
 };
 export default Contact;

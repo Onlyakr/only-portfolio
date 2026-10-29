@@ -5,16 +5,19 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none  aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  "group/button inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-[color,background-color,box-shadow,translate,scale] duration-150 ease-out active:scale-[0.97] motion-reduce:transition-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:transition-transform [&_svg]:duration-200 [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
   {
     variants: {
       variant: {
+        // Raised key: top highlight, darker bottom lip, hairline ring, and a
+        // drop shadow that grows on hover and collapses on press.
         default:
-          "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
+          "bg-gradient-to-b from-neutral-700 to-neutral-950 text-white shadow-[inset_0_1px_0_0_rgb(255_255_255/0.22),inset_0_-2px_0_0_rgb(0_0_0/0.45),0_0_0_1px_rgb(0_0_0/0.9),0_2px_3px_0_rgb(0_0_0/0.25),0_8px_16px_-6px_rgb(0_0_0/0.45)] hover:-translate-y-0.5 hover:from-neutral-600 hover:to-neutral-900 hover:shadow-[inset_0_1px_0_0_rgb(255_255_255/0.25),inset_0_-2px_0_0_rgb(0_0_0/0.45),0_0_0_1px_rgb(0_0_0/0.9),0_4px_6px_0_rgb(0_0_0/0.25),0_14px_24px_-8px_rgb(0_0_0/0.5)] active:translate-y-px active:shadow-[inset_0_2px_3px_0_rgb(0_0_0/0.5),0_0_0_1px_rgb(0_0_0/0.9)] dark:from-white dark:to-neutral-300 dark:text-neutral-950 dark:shadow-[inset_0_1px_0_0_rgb(255_255_255/1),inset_0_-2px_0_0_rgb(0_0_0/0.18),0_0_0_1px_rgb(255_255_255/0.2),0_2px_3px_0_rgb(0_0_0/0.6),0_8px_18px_-6px_rgb(255_255_255/0.18)] dark:hover:from-white dark:hover:to-neutral-200 dark:hover:shadow-[inset_0_1px_0_0_rgb(255_255_255/1),inset_0_-2px_0_0_rgb(0_0_0/0.18),0_0_0_1px_rgb(255_255_255/0.3),0_4px_6px_0_rgb(0_0_0/0.6),0_14px_28px_-8px_rgb(255_255_255/0.25)] dark:active:shadow-[inset_0_2px_3px_0_rgb(0_0_0/0.25),0_0_0_1px_rgb(255_255_255/0.2)]",
         destructive:
           "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+        // Inset bottom edge reads as a raised key.
         outline:
-          "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          "border bg-gradient-to-b from-background to-muted/60 shadow-[inset_0_-1px_0_0_rgb(0_0_0/0.06),0_1px_2px_0_rgb(0_0_0/0.06)] hover:-translate-y-px hover:text-foreground hover:shadow-[inset_0_-1px_0_0_rgb(0_0_0/0.06),0_4px_10px_-4px_rgb(0_0_0/0.15)] active:translate-y-0 dark:border-input dark:from-input/40 dark:to-input/10 dark:shadow-[inset_0_1px_0_0_rgb(255_255_255/0.06),0_1px_2px_0_rgb(0_0_0/0.5)] dark:hover:shadow-[inset_0_1px_0_0_rgb(255_255_255/0.1),0_6px_14px_-6px_rgb(0_0_0/0.8)]",
         secondary:
           "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
         ghost:

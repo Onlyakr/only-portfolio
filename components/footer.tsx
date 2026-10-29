@@ -1,40 +1,38 @@
 import Link from "next/link";
 
-import { Linkedin, Github, Mail } from "lucide-react";
+import { SocialIcon } from "./social-icon";
 import { socialLinks } from "@/lib/data";
-import { BlurFade } from "./ui/blur-fade";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <BlurFade>
-      <footer className="mt-16 h-32">
-        <div className="container mx-auto flex h-full max-w-3xl items-center justify-between">
-          <p className="text-muted-foreground text-sm">
-            © {currentYear} Akrawin Portfolio
-          </p>
+    <footer className="relative">
+      <span
+        aria-hidden
+        className="bg-border absolute top-0 right-[-100vw] left-[-100vw] h-px"
+      />
+      <div className="flex h-20 items-center justify-between px-6 md:px-10">
+        <p className="text-muted-foreground font-mono text-xs">
+          © {currentYear} akrawin.com
+        </p>
 
-          <ul className="text-muted-foreground flex items-center gap-4">
-            {socialLinks.map((link) => (
-              <li key={link.name}>
-                <Link href={link.href} target="_blank">
-                  {link.icon === "Github" ? (
-                    <Github />
-                  ) : link.icon === "Linkedin" ? (
-                    <Linkedin />
-                  ) : link.icon === "Mail" ? (
-                    <Mail />
-                  ) : (
-                    link.icon
-                  )}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </footer>
-    </BlurFade>
+        <ul className="text-muted-foreground flex items-center gap-4">
+          {socialLinks.map((link) => (
+            <li key={link.name}>
+              <Link
+                href={link.href}
+                target="_blank"
+                aria-label={link.name}
+                className="hover:text-foreground transition-colors"
+              >
+                <SocialIcon icon={link.icon} className="size-4" />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </footer>
   );
 };
 export default Footer;

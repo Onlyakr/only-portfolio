@@ -1,127 +1,112 @@
+// Content mirrors the resume. Update both together.
 export const intro = {
   name: "Akrawin Datchanee",
-  firstDescription: "20yo, 3rd-year Computer Engineering student at KMITL.",
-  secondDescription:
-    "Looking for a Frontend internship to learn, grow, and contribute.",
-  thirdDescription: "Internship period: 1 April 2025 - 26 June 2025",
+  about: "21yo, 4th-year Computer Engineering student at KMITL.",
 };
 
 export const socialLinks = [
   {
-    name: "",
-    href: "https://github.com/Onlyakr",
-    icon: "Github",
+    name: "LinkedIn",
+    icon: "linkedin",
+    href: "https://www.linkedin.com/in/akrawin-datchanee-8b6022384/",
   },
   {
-    name: "Linkedin",
-    href: "https://www.linkedin.com/in/akrawin-datchanee-8b6022384/",
-    icon: "Linkedin",
+    name: "GitHub",
+    icon: "github",
+    href: "https://github.com/Onlyakr",
+  },
+] as const;
+
+export const experiences = [
+  {
+    role: "Full-Stack Developer Intern",
+    company: "SCG Thung Song",
+    logo: "/scg-logo.svg",
+    location: "Nakhon Si Thammarat, Thailand",
+    period: "May 2025 - Present",
+    highlights: [
+      "Rebuilt a legacy Express fleet system in NestJS and Next.js on its existing SQL Server, at feature parity",
+      "Built an AI assistant for fleet questions and booking forms, using an LLM router with code-driven workflows",
+      "Isolated each company's data by scoping every query to the user's companies and role",
+      "Implemented JWT auth with rotating refresh tokens and token-reuse detection",
+      "Built validated Excel imports for GPS and fuel data that feed cost and utilization dashboards",
+      "Gathered requirements and designed user flows for a plant digitalization system",
+    ],
   },
 ];
 
 export const educations = [
   {
     image: "/kmitl-image.png",
-    name: "B.Eng in Computer Engineering",
-    institution: [
-      "King Mongkut's Institute of Technology Ladkrabang",
-      "Prince of Chumphon Campus",
-    ],
-    year: "2023 - Present",
-    descriptions: ["GPA 3.76"],
+    name: "Bachelor of Engineering in Computer Engineering",
+    institution: "King Mongkut's Institute of Technology Ladkrabang",
+    location: "Chumphon, Thailand",
+    year: "2023 - Expected 2027",
+    gpa: "3.76",
   },
   {
     image: "/kmutnb-image.png",
     name: "Pre-Engineering in Electrical Engineering",
-    institution: [
-      "King Mongkut's University of Technology North Bangkok",
-      "Thai-German Pre-Engineering School",
-    ],
-    year: "2020 - 2023",
-    descriptions: ["GPA 3.1"],
+    institution: "King Mongkut's University of Technology North Bangkok",
+    location: "Bangkok, Thailand",
+    year: "Graduated 2023",
+    gpa: "3.10",
   },
 ];
 
 export const skills = [
   {
-    name: "HTML",
-    src: "/html-icon.png",
+    category: "Languages",
+    items: ["TypeScript", "JavaScript", "Python", "SQL"],
   },
   {
-    name: "CSS",
-    src: "/css-icon.png",
+    category: "Frameworks",
+    items: ["Next.js", "React", "NestJS", "Express", "FastAPI"],
   },
   {
-    name: "JavaScript",
-    src: "/javascript-icon.png",
+    category: "Libraries",
+    items: [
+      "Tailwind CSS",
+      "Zustand",
+      "TanStack Query",
+      "React Hook Form",
+      "Zod",
+      "LangChain",
+    ],
   },
   {
-    name: "TypeScript",
-    src: "/typescript-icon.png",
+    category: "Databases & ORM",
+    items: ["PostgreSQL", "SQL Server", "Prisma", "Drizzle"],
   },
   {
-    name: "React.js",
-    src: "/react-icon.png",
-  },
-  {
-    name: "Next.js",
-    src: "/next-icon.svg",
-  },
-  {
-    name: "Tailwind",
-    src: "/tailwind-icon.png",
-  },
-  {
-    name: "Shadcn UI",
-    src: "/shadcn-icon.png",
+    category: "Developer Tools",
+    items: ["Git", "GitHub", "Docker", "Postman", "Claude Code"],
   },
 ];
 
 export const projects = [
   {
-    name: "Todo List",
-    description: [
-      "A simple task manager where you can add, edit and delete tasks..",
-    ],
-    image: "/todo-list-image.png",
-    technologies: ["React", "Tailwind", "Vite"],
-    link: {
-      github: "https://github.com/Onlyakr/todo-list",
-      live: "https://tamraidee.vercel.app/",
-    },
-  },
-  {
-    name: "Weather App",
-    description: [
-      "A responsive app that shows live weather forecasts by fetching data from an external API.",
-    ],
-    image: "/weather-app-image.png",
-    technologies: ["React", "Tailwind", "Vite"],
-    link: {
-      github: "https://github.com/Onlyakr/weather-app",
-      live: "https://weather-app-two-nu-55.vercel.app/",
-    },
-  },
-  {
-    name: "POS System (Frontend)",
-    description: [
-      "A point-of-sale system to manage inventory, sales, and customers.",
-    ],
-    image: "/pos-image.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind", "Shadcn"],
-    link: {
-      github: "https://github.com/Onlyakr/pos-app-frontend",
-    },
-  },
-  {
-    name: "TasteTrail (Frontend)",
-    description: [
-      "A restaurant finder with an interactive search to discover nearby places.",
-    ],
+    name: "TasteTrail",
+    role: "Frontend",
+    period: "Jul 2025 - Oct 2025",
+    description:
+      "A restaurant review platform with reviews, restaurant management, and maps.",
     image: "/tastetrail-image.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind", "Shadcn"],
+    technologies: ["Next.js", "TypeScript", "Zustand", "Tailwind CSS"],
     link: {
       github: "https://github.com/KMITL-PCC/TasteTrail",
+    },
+  },
+  {
+    name: "POS System",
+    role: "Frontend",
+    period: "Aug 2025 - Sep 2025",
+    description:
+      "A point-of-sale web app with barcode checkout, receipt printing, and a sales dashboard.",
+    image: "/pos-image.png",
+    technologies: ["Next.js", "TypeScript", "Zustand", "Tailwind CSS"],
+    link: {
+      github: "https://github.com/Onlyakr/pos-app-frontend",
     },
   },
 ];
