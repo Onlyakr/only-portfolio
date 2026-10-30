@@ -2,6 +2,7 @@
 export const intro = {
   name: "Akrawin Datchanee",
   about: "21yo, 4th-year Computer Engineering student at KMITL.",
+  seeking: "Looking for a full-stack or software developer role.",
 };
 
 export const socialLinks = [
@@ -25,12 +26,12 @@ export const experiences = [
     location: "Nakhon Si Thammarat, Thailand",
     period: "May 2025 - Present",
     highlights: [
-      "Rebuilt a legacy Express fleet system in NestJS and Next.js on its existing SQL Server, at feature parity",
-      "Built an AI assistant for fleet questions and booking forms, using an LLM router with code-driven workflows",
-      "Isolated each company's data by scoping every query to the user's companies and role",
-      "Implemented JWT auth with rotating refresh tokens and token-reuse detection",
-      "Built validated Excel imports for GPS and fuel data that feed cost and utilization dashboards",
       "Gathered requirements and designed user flows for a plant digitalization system",
+      "Migrated a legacy Express system to NestJS and Next.js",
+      "Built an AI assistant with an LLM router and code-driven workflows",
+      "Implemented multi-tenant data isolation and role-based access control",
+      "Implemented JWT authentication with refresh-token rotation",
+      "Built validated data imports and analytics dashboards",
     ],
   },
 ];
@@ -42,7 +43,7 @@ export const educations = [
     institution: "King Mongkut's Institute of Technology Ladkrabang",
     location: "Chumphon, Thailand",
     year: "2023 - Expected 2027",
-    gpa: "3.76",
+    gpa: "3.83",
   },
   {
     image: "/kmutnb-image.png",
@@ -92,7 +93,7 @@ export const projects = [
     description:
       "A restaurant review platform with reviews, restaurant management, and maps.",
     image: "/tastetrail-image.png",
-    technologies: ["Next.js", "TypeScript", "Zustand", "Tailwind CSS"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     link: {
       github: "https://github.com/KMITL-PCC/TasteTrail",
     },

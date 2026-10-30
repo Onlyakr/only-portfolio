@@ -50,6 +50,10 @@ const Home = () => {
             </p>
           </BlurFade>
 
+          <BlurFade delay={0.55}>
+            <p className="text-secondary-foreground/90">{intro.seeking}</p>
+          </BlurFade>
+
           <BlurFade delay={0.6}>
             <div className="mt-4 flex items-center gap-4">
               <HoverButton href="/resume.pdf" target="_blank">
