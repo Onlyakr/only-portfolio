@@ -2,7 +2,7 @@
 export const intro = {
   name: "Akrawin Datchanee",
   about: "21yo, 4th-year Computer Engineering student at KMITL.",
-  seeking: "Looking for a full-stack or software developer role.",
+  seeking: "Looking for a full-stack or software developer role",
 };
 
 export const socialLinks = [
@@ -87,18 +87,6 @@ export const skills = [
 
 export const projects = [
   {
-    name: "TasteTrail",
-    role: "Frontend",
-    period: "Jul 2025 - Oct 2025",
-    description:
-      "A restaurant review platform with reviews, restaurant management, and maps.",
-    image: "/tastetrail-image.png",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    link: {
-      github: "https://github.com/KMITL-PCC/TasteTrail",
-    },
-  },
-  {
     name: "POS System",
     role: "Frontend",
     period: "Aug 2025 - Sep 2025",
@@ -108,6 +96,18 @@ export const projects = [
     technologies: ["Next.js", "TypeScript", "Zustand", "Tailwind CSS"],
     link: {
       github: "https://github.com/Onlyakr/pos-app-frontend",
+    },
+  },
+  {
+    name: "TasteTrail",
+    role: "Frontend",
+    period: "Jul 2025 - Oct 2025",
+    description:
+      "A restaurant review platform with reviews, restaurant management, and maps.",
+    image: "/tastetrail-image.png",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    link: {
+      github: "https://github.com/KMITL-PCC/TasteTrail",
     },
   },
 ];

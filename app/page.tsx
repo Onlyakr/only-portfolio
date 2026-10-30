@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowDownRight, ArrowRight } from "lucide-react";
 
 import BlurText from "@/components/ui/blur-text";
 import { BlurFade } from "@/components/ui/blur-fade";
@@ -51,7 +51,13 @@ const Home = () => {
           </BlurFade>
 
           <BlurFade delay={0.55}>
-            <p className="text-secondary-foreground/90">{intro.seeking}</p>
+            <p className="text-foreground flex items-center gap-2 font-semibold">
+              <ArrowDownRight
+                aria-hidden
+                className="animate-nudge size-5 shrink-0 motion-reduce:animate-none"
+              />
+              {intro.seeking}
+            </p>
           </BlurFade>
 
           <BlurFade delay={0.6}>
