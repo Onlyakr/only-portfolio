@@ -19,12 +19,7 @@ const Home = () => {
     <>
       <section className="flex flex-col items-start gap-10 px-6 py-12 md:flex-row-reverse md:items-center md:justify-between md:px-10 md:py-16">
         <BlurFade delay={0.2} className="self-center md:mr-6">
-          <PhotoStack
-            photos={[
-              { src: "/profile.png", alt: intro.name },
-              { src: "/candid.jpg", alt: `Candid photo of ${intro.name}` },
-            ]}
-          />
+          <PhotoStack photos={[{ src: "/profile.jpg", alt: intro.name }]} />
         </BlurFade>
 
         <div className="flex max-w-lg flex-col gap-4">

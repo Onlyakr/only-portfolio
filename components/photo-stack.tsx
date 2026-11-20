@@ -14,6 +14,29 @@ type Photo = { src: string; alt: string };
 
 const SWIPE_DISTANCE = 100;
 
+const FRAME =
+  "bg-background size-full origin-bottom overflow-hidden rounded-lg border p-1 shadow-[0_10px_15px_-3px_rgb(0_0_0/0.3),0_4px_6px_-4px_rgb(0_0_0/0.3)]";
+
+const PhotoImage = ({
+  photo,
+  priority,
+}: {
+  photo: Photo;
+  priority: boolean;
+}) => (
+  <div className="pointer-events-none relative size-full overflow-hidden rounded-md">
+    <Image
+      src={photo.src}
+      alt={photo.alt}
+      fill
+      priority={priority}
+      draggable={false}
+      sizes="175px"
+      className="object-cover select-none"
+    />
+  </div>
+);
+
 const Card = ({
   photo,
   depth,
@@ -48,7 +71,7 @@ const Card = ({
       transition={{ type: "spring", stiffness: 300, damping: 24 }}
     >
       <motion.div
-        className="bg-background size-full origin-bottom overflow-hidden rounded-lg border p-1 shadow-[0_10px_15px_-3px_rgb(0_0_0/0.3),0_4px_6px_-4px_rgb(0_0_0/0.3)] data-[top=true]:cursor-grab data-[top=true]:active:cursor-grabbing"
+        className={`${FRAME} data-[top=true]:cursor-grab data-[top=true]:active:cursor-grabbing`}
         data-top={isTop}
         style={{ x, rotate, opacity }}
         drag={isTop ? "x" : false}
@@ -56,27 +79,28 @@ const Card = ({
         onDragEnd={handleDragEnd}
         onTap={isTop ? onSwipe : undefined}
       >
-        <div className="pointer-events-none relative size-full overflow-hidden rounded-md">
-          <Image
-            src={photo.src}
-            alt={photo.alt}
-            fill
-            priority={isTop}
-            draggable={false}
-            sizes="175px"
-            className="object-cover select-none"
-          />
-        </div>
+        <PhotoImage photo={photo} priority={isTop} />
       </motion.div>
     </motion.div>
   );
 };
 
 // A swipeable stack: drag or tap the top photo to send it to the back.
+// A single photo has nothing to shuffle, so it renders as a still frame.
 const PhotoStack = ({ photos }: { photos: Photo[] }) => {
   const [order, setOrder] = useState(() => photos.map((_, index) => index));
 
   const sendTopToBack = () => setOrder(([top, ...rest]) => [...rest, top]);
+
+  if (photos.length === 1) {
+    return (
+      <div className="h-[233px] w-[175px]">
+        <div className={FRAME}>
+          <PhotoImage photo={photos[0]} priority />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div
